@@ -1,0 +1,112 @@
+** sch_path: /foss/designs/dpidealtb.sch
+**.subckt dpidealtb
+V8 n GND 1.8
+.save i(v8)
+Vdd vd GND 1.8
+.save i(vdd)
+Vc0 c0 GND pulse(1.8 0 0 0 0 5m 10m)
+.save i(vc0)
+Vc1 c1 GND pulse(1.8 0 0 0 0 10m 20m)
+.save i(vc1)
+Vc2 c2 GND pulse(1.8 0 0 0 0 20m 40m)
+.save i(vc2)
+Vc3 c3 GND pulse(1.8 0 0 0 0 40m 80m)
+.save i(vc3)
+Vc4 c4 GND pulse(1.8 0 0 0 0 80m 160m)
+.save i(vc4)
+Vc5 c5 GND pulse(1.8 0 0 0 0 160m 320m)
+.save i(vc5)
+Vc6 c6 GND pulse(1.8 0 0 0 0 320m 640m)
+.save i(vc6)
+Vc7 c7 GND pulse(1.8 0 0 0 0 640m 1280m)
+.save i(vc7)
+x1 GND vd n c2 c5 c6 c4 c7 c3 c1 c0 dpideal
+**** begin user architecture code
+
+.control
+save all
+tran 1m 1280m 5m
+let R = (n/i(V8))
+plot abs(1/R)
+plot c0 c1+2 c2+4 c3+6 c4+8 c6+10 c7+12
+.endc
+
+
+** opencircuitdesign pdks install
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt_mm
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/dpideal.sym # of pins=11
+** sym_path: /foss/designs/dpideal.sym
+** sch_path: /foss/designs/dpideal.sch
+.subckt dpideal gnd vd n c2 c5 c6 c4 c7 c3 c1 c0
+*.ipin c0
+*.ipin c1
+*.ipin c2
+*.ipin c3
+*.ipin c4
+*.ipin c5
+*.ipin c6
+*.ipin c7
+*.iopin gnd
+*.iopin vd
+*.iopin n
+x1 vd c0 gnd net1 gnd tg
+x2 vd c1 gnd net2 gnd tg
+x3 vd c2 gnd net3 gnd tg
+x4 vd c3 gnd net4 gnd tg
+x5 vd c4 gnd net5 gnd tg
+x6 vd c5 gnd net6 gnd tg
+x7 vd c6 gnd net7 gnd tg
+x8 vd c7 gnd net8 gnd tg
+R1 n net8 0.5k m=1
+R2 n net7 1k m=1
+R3 n net6 2k m=1
+R4 n net5 4k m=1
+R5 n net4 8k m=1
+R6 n net3 16k m=1
+R7 n net2 32k m=1
+R8 n net1 64k m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/tg.sym # of pins=5
+** sym_path: /foss/designs/tg.sym
+** sch_path: /foss/designs/tg.sch
+.subckt tg vd ctrl vgnd A B
+*.iopin B
+*.iopin A
+*.iopin vgnd
+*.iopin vd
+*.ipin ctrl
+x1 vd ctrl nctrl vgnd inverter
+XM1 A ctrl B vgnd sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 A nctrl B vd sky130_fd_pr__pfet_01v8 L=0.15 W=30 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/inverter/xschem_files/inverter.sym # of pins=4
+** sym_path: /foss/designs/inverter/xschem_files/inverter.sym
+** sch_path: /foss/designs/inverter/xschem_files/inverter.sch
+.subckt inverter vd in out gnd
+*.ipin in
+*.opin out
+*.iopin vd
+*.iopin gnd
+XN0 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XP0 out in vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

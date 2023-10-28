@@ -1,0 +1,137 @@
+timestamp 1698434776
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inverter inverter_0 -1 0 1294 0 -1 3077
+use sky130_fd_pr__pfet_01v8_48WM2A sky130_fd_pr__pfet_01v8_48WM2A_0 1 0 1370 0 1 863
+use sky130_fd_pr__nfet_01v8_SJYH3Y sky130_fd_pr__nfet_01v8_SJYH3Y_0 1 0 791 0 1 808
+use sky130_fd_pr__pfet_01v8_KGAQE3 XM2 1 0 2293 0 1 3713
+use sky130_fd_pr__nfet_01v8_A5ES5P XM1 1 0 1924 0 1 1757
+port "vd" 0 1730 638 1930 838 m1
+port "B" 4 1000 384 1200 584 m1
+port "A" 3 1729 919 1929 1119 m1
+port "vgnd" 2 381 888 581 1088 m1
+port "ctrl" 1 694 1162 894 1362 m1
+node "m1_1282_620#" 0 11.9551 1282 620 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4060 256 0 0 0 0 0 0 0 0 0 0
+node "m1_756_626#" 0 12.245 756 626 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3640 244 0 0 0 0 0 0 0 0 0 0
+node "vd" 0 197.692 1730 638 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 60252 1132 0 0 0 0 0 0 0 0 0 0
+node "m1_830_820#" 1 102.898 830 820 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 34200 1052 0 0 0 0 0 0 0 0 0 0
+node "B" 2 530.345 1000 384 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 141688 3360 0 0 0 0 0 0 0 0 0 0
+node "A" 1 193.5 1729 919 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 73735 1744 0 0 0 0 0 0 0 0 0 0
+node "vgnd" 4 924.804 381 888 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 56638 1318 267761 5154 0 0 0 0 0 0 0 0
+node "m1_1337_1179#" 1 337.78 1337 1179 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90344 2010 0 0 0 0 0 0 0 0 0 0
+node "ctrl" 1 308.544 694 1162 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 91711 2070 0 0 0 0 0 0 0 0 0 0
+node "m1_930_1704#" 0 39.5222 930 1704 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5625 300 0 0 0 0 0 0 0 0 0 0
+node "a_1326_658#" 134 90.2761 1326 658 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4028 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_852_796#" 1120 0 852 796 ndif 0 0 0 0 0 0 0 0 1344 248 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vd" "vgnd" 20.8542
+cap "vd" "m1_830_820#" 1.476
+cap "A" "ctrl" 6.81593
+cap "vgnd" "m1_1337_1179#" 97.2645
+cap "m1_756_626#" "a_1326_658#" 0.279356
+cap "m1_1282_620#" "B" 140.787
+cap "vd" "a_852_796#" 0.045527
+cap "m1_756_626#" "vgnd" 1.22784
+cap "B" "A" 38.941
+cap "vgnd" "ctrl" 146.273
+cap "B" "a_1326_658#" 4.29181
+cap "m1_830_820#" "ctrl" 20.2214
+cap "m1_1282_620#" "A" 16.0103
+cap "B" "vgnd" 68.0327
+cap "m1_830_820#" "B" 75.3555
+cap "ctrl" "a_852_796#" 0.0700142
+cap "m1_1282_620#" "a_1326_658#" 0.773026
+cap "B" "a_852_796#" 0.152573
+cap "m1_1337_1179#" "ctrl" 43.5806
+cap "vgnd" "m1_930_1704#" 1.57365
+cap "A" "a_1326_658#" 1.41067
+cap "vd" "B" 34.8229
+cap "m1_1282_620#" "vgnd" 1.30797
+cap "m1_756_626#" "ctrl" 9.85878
+cap "A" "vgnd" 42.8464
+cap "m1_830_820#" "A" 30.75
+cap "m1_756_626#" "B" 87.2894
+cap "m1_1337_1179#" "m1_930_1704#" 8.33584
+cap "vgnd" "a_1326_658#" 1.03906
+cap "vd" "A" 137.423
+cap "A" "m1_1337_1179#" 60.795
+cap "B" "ctrl" 7.0991
+cap "m1_830_820#" "vgnd" 14.8997
+cap "m1_1282_620#" "m1_756_626#" 4.20789
+cap "vd" "a_1326_658#" 1.05194
+cap "vgnd" "a_852_796#" 0.287643
+cap "ctrl" "m1_930_1704#" 69.1875
+cap "m1_1337_1179#" "a_1326_658#" 4.39266
+cap "m1_830_820#" "a_852_796#" 0.791739
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "inverter_0/vd" 23.7903
+cap "inverter_0/in" "inverter_0/m1_n793_1313#" 59.9639
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/m1_n793_1313#" 103.431
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/out" -12.7404
+cap "inverter_0/out" "inverter_0/in" 18.21
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 91.4427
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/in" 26.5409
+cap "inverter_0/vd" "inverter_0/m1_n793_1313#" 170.333
+cap "inverter_0/out" "inverter_0/vd" 6.39198
+cap "inverter_0/m1_n793_1313#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 64.761
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/vd" 12.8589
+cap "inverter_0/in" "inverter_0/vd" 16.7372
+cap "inverter_0/out" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 19.4155
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 81.8965
+cap "inverter_0/in" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 38.5257
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "inverter_0/m1_n793_1313#" 193.694
+cap "inverter_0/out" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 37.0883
+cap "inverter_0/in" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 53.0493
+cap "inverter_0/vd" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 45.8688
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 122.628
+cap "inverter_0/out" "inverter_0/m1_n793_1313#" 65.6392
+cap "inverter_0/out" "inverter_0/m1_n793_1313#" 5.78723
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "inverter_0/m1_n793_1313#" 5.79305
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "inverter_0/m1_n793_1313#" 16.5269
+cap "inverter_0/in" "inverter_0/m1_n793_1313#" 1.76824
+cap "inverter_0/vd" "inverter_0/m1_n793_1313#" 19.67
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/vd" 0.010093
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "inverter_0/in" 0.393114
+cap "inverter_0/m1_n793_1313#" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 1.88015
+cap "inverter_0/out" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 34.1012
+cap "inverter_0/in" "inverter_0/vd" 2.98748
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "inverter_0/vd" 1.13362
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "inverter_0/in" 1.38072
+cap "inverter_0/m1_n793_1313#" "inverter_0/vd" 2.39758
+cap "inverter_0/m1_n793_1313#" "inverter_0/in" 3.0644
+cap "inverter_0/out" "inverter_0/vd" 9.68138
+cap "inverter_0/m1_n793_1313#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" 1.73656
+cap "inverter_0/out" "inverter_0/in" 4.5952
+cap "inverter_0/vd" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 3.00011
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "inverter_0/out" 16.1969
+cap "inverter_0/in" "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" 3.80719
+cap "inverter_0/m1_n793_1313#" "inverter_0/out" 12.4339
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "inverter_0/m1_n793_1313#" 0.200249
+cap "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "inverter_0/m1_n793_1313#" 2.10702
+cap "inverter_0/out" "inverter_0/m1_n793_1313#" 0.00442611
+merge "XM2/VSUBS" "XM1/VSUBS" -718.659 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12856 -676 0 0 0 0 0 0 0 0 0 0
+merge "XM1/VSUBS" "sky130_fd_pr__nfet_01v8_SJYH3Y_0/a_n175_n274#"
+merge "sky130_fd_pr__nfet_01v8_SJYH3Y_0/a_n175_n274#" "inverter_0/m1_n793_1313#"
+merge "inverter_0/m1_n793_1313#" "vgnd"
+merge "vgnd" "sky130_fd_pr__pfet_01v8_48WM2A_0/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/VSUBS" "inverter_0/VSUBS"
+merge "inverter_0/VSUBS" "VSUBS"
+merge "sky130_fd_pr__nfet_01v8_SJYH3Y_0/a_n73_n100#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" -174.622 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3382 -362 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n33_n150#" "B"
+merge "sky130_fd_pr__nfet_01v8_SJYH3Y_0/a_15_n100#" "a_852_796#" -200.204 0 0 0 0 0 0 0 0 -1344 -248 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8803 -772 0 0 0 0 0 0 0 0 0 0
+merge "a_852_796#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_63_n150#"
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/a_63_n150#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#"
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n125_n150#" "m1_830_820#"
+merge "m1_830_820#" "A"
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/a_15_181#" "m1_1282_620#" -348.144 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1111 -210 0 0 0 0 -21554 -934 0 0 0 0 0 0 0 0 0 0
+merge "m1_1282_620#" "inverter_0/out"
+merge "inverter_0/out" "m1_1337_1179#"
+merge "m1_1337_1179#" "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n81_n247#"
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/a_n81_n247#" "a_1326_658#"
+merge "sky130_fd_pr__nfet_01v8_SJYH3Y_0/a_n33_n188#" "m1_756_626#" -232.365 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8940 -658 0 0 0 0 0 0 0 0 0 0
+merge "m1_756_626#" "inverter_0/in"
+merge "inverter_0/in" "ctrl"
+merge "inverter_0/vd" "m1_930_1704#" -115.067 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5369 -300 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_48WM2A_0/w_n263_n369#" "vd" -242.609 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4758 -322 0 0 0 0 0 0 0 0 0 0

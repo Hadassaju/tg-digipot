@@ -1,0 +1,33 @@
+* NGSPICE file created from tg.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_BSG5A6 a_63_n150# a_15_181# a_n33_n150# w_n263_n369#
++ a_n81_n247# a_n125_n150#
+X0 a_63_n150# a_15_181# a_n33_n150# w_n263_n369# sky130_fd_pr__pfet_01v8 ad=4.65e+11p pd=3.62e+06u as=4.95e+11p ps=3.66e+06u w=1.5e+06u l=150000u
+X1 a_n33_n150# a_n81_n247# a_n125_n150# w_n263_n369# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=4.65e+11p ps=3.62e+06u w=1.5e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_SSYH3Y a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt inverter vd in out VSUBS
+Xsky130_fd_pr__pfet_01v8_BSG5A6_0 out in vd vd in out sky130_fd_pr__pfet_01v8_BSG5A6
+XXN0 VSUBS in out VSUBS sky130_fd_pr__nfet_01v8_SSYH3Y
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_48WM2A a_63_n150# a_15_181# a_n33_n150# w_n263_n369#
++ a_n81_n247# a_n125_n150#
+X0 a_63_n150# a_15_181# a_n33_n150# w_n263_n369# sky130_fd_pr__pfet_01v8 ad=4.65e+11p pd=3.62e+06u as=4.95e+11p ps=3.66e+06u w=1.5e+06u l=150000u
+X1 a_n33_n150# a_n81_n247# a_n125_n150# w_n263_n369# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=4.65e+11p ps=3.62e+06u w=1.5e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_SJYH3Y a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt tg vd ctrl vgnd A B
+Xinverter_0 inverter_0/vd ctrl inverter_0/out vgnd inverter
+Xsky130_fd_pr__pfet_01v8_48WM2A_0 A inverter_0/out B vd inverter_0/out A sky130_fd_pr__pfet_01v8_48WM2A
+Xsky130_fd_pr__nfet_01v8_SJYH3Y_0 B ctrl A vgnd sky130_fd_pr__nfet_01v8_SJYH3Y
+.ends
+

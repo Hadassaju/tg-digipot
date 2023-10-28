@@ -1,0 +1,85 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1698425856
+<< checkpaint >>
+rect 19482 44469 22404 86442
+rect 19133 23508 22404 44469
+rect 18784 13055 22404 23508
+rect 18435 7854 22404 13055
+rect -1260 7121 3554 7174
+rect 18086 7121 22404 7854
+rect -1260 -660 22404 7121
+rect 981 -713 22404 -660
+rect 17388 -766 22404 -713
+rect 17737 -819 22404 -766
+rect 18086 -872 22404 -819
+rect 18435 -925 22404 -872
+rect 18784 -978 22404 -925
+rect 19133 -1031 22404 -978
+rect 19482 -1084 22404 -1031
+use sky130_fd_pr__res_high_po_0p35_XC3JCP  XR1
+timestamp 0
+transform 1 0 20594 0 1 21719
+box -201 -21490 201 21490
+use sky130_fd_pr__res_high_po_0p35_CKPNEG  XR2
+timestamp 0
+transform 1 0 20245 0 1 11265
+box -201 -10983 201 10983
+use sky130_fd_pr__res_high_po_0p35_3L5A8G  XR3
+timestamp 0
+transform 1 0 19896 0 1 6065
+box -201 -5730 201 5730
+use sky130_fd_pr__res_high_po_0p35_WNB9DH  XR4
+timestamp 0
+transform 1 0 19547 0 1 3491
+box -201 -3103 201 3103
+use sky130_fd_pr__res_high_po_0p35_HRM75X  XR5
+timestamp 0
+transform 1 0 19198 0 1 2231
+box -201 -1790 201 1790
+use sky130_fd_pr__res_high_po_0p35_SDEK4A  XR6
+timestamp 0
+transform 1 0 2442 0 1 1390
+box -201 -843 201 843
+use sky130_fd_pr__res_high_po_0p35_MTJUHY  XR7
+timestamp 0
+transform 1 0 18849 0 1 1627
+box -201 -1133 201 1133
+use sky130_fd_pr__res_high_po_0p35_TZUS7P  XR8
+timestamp 0
+transform 1 0 20943 0 1 42679
+box -201 -42503 201 42503
+use tg  x1
+timestamp 1698425856
+transform 1 0 0 0 1 2200
+box 0 -1600 2294 3714
+use tg  x2
+timestamp 1698425856
+transform 1 0 2643 0 1 2147
+box 0 -1600 2294 3714
+use tg  x3
+timestamp 1698425856
+transform 1 0 4937 0 1 2147
+box 0 -1600 2294 3714
+use tg  x4
+timestamp 1698425856
+transform 1 0 7231 0 1 2147
+box 0 -1600 2294 3714
+use tg  x5
+timestamp 1698425856
+transform 1 0 9525 0 1 2147
+box 0 -1600 2294 3714
+use tg  x6
+timestamp 1698425856
+transform 1 0 11819 0 1 2147
+box 0 -1600 2294 3714
+use tg  x7
+timestamp 1698425856
+transform 1 0 14113 0 1 2147
+box 0 -1600 2294 3714
+use tg  x8
+timestamp 1698425856
+transform 1 0 16407 0 1 2147
+box 0 -1600 2294 3714
+<< end >>

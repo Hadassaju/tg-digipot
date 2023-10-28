@@ -1,0 +1,67 @@
+** sch_path: /foss/designs/digipot.sch
+**.subckt digipot c0 c1 c2 c3 c4 c5 c6 c7 gnd vd n
+*.ipin c0
+*.ipin c1
+*.ipin c2
+*.ipin c3
+*.ipin c4
+*.ipin c5
+*.ipin c6
+*.ipin c7
+*.iopin gnd
+*.iopin vd
+*.iopin n
+x1 vd c0 gnd net1 gnd tg
+XR6 net2 n gnd sky130_fd_pr__res_high_po_0p35 L=2.45 mult=1 m=1
+x2 vd c1 gnd net3 gnd tg
+x3 vd c2 gnd net4 gnd tg
+x4 vd c3 gnd net5 gnd tg
+x5 vd c4 gnd net6 gnd tg
+x6 vd c5 gnd net7 gnd tg
+x7 vd c6 gnd net8 gnd tg
+x8 vd c7 gnd net2 gnd tg
+XR7 net8 n gnd sky130_fd_pr__res_high_po_0p35 L=5.35 mult=1 m=1
+XR5 net7 n gnd sky130_fd_pr__res_high_po_0p35 L=11.92 mult=1 m=1
+XR4 net6 n gnd sky130_fd_pr__res_high_po_0p35 L=25.05 mult=1 m=1
+XR3 net5 n gnd sky130_fd_pr__res_high_po_0p35 L=51.32 mult=1 m=1
+XR2 net4 n gnd sky130_fd_pr__res_high_po_0p35 L=103.85 mult=1 m=1
+XR1 net3 n gnd sky130_fd_pr__res_high_po_0p35 L=208.92 mult=1 m=1
+XR8 net1 n gnd sky130_fd_pr__res_high_po_0p35 L=419.05 mult=1 m=1
+**.ends
+
+* expanding   symbol:  /foss/designs/tg.sym # of pins=5
+** sym_path: /foss/designs/tg.sym
+** sch_path: /foss/designs/tg.sch
+.subckt tg vd ctrl vgnd A B
+*.iopin B
+*.iopin A
+*.iopin vgnd
+*.iopin vd
+*.ipin ctrl
+x1 vd ctrl nctrl vgnd inverter
+XM1 A ctrl B vgnd sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 A nctrl B vd sky130_fd_pr__pfet_01v8 L=0.15 W=30 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/inverter/xschem_files/inverter.sym # of pins=4
+** sym_path: /foss/designs/inverter/xschem_files/inverter.sym
+** sch_path: /foss/designs/inverter/xschem_files/inverter.sch
+.subckt inverter vd in out gnd
+*.ipin in
+*.opin out
+*.iopin vd
+*.iopin gnd
+XN0 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XP0 out in vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

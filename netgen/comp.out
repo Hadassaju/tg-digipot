@@ -1,0 +1,130 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BSG5A6 in circuit inverter (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SSYH3Y in circuit inverter (0)(1 instance)
+
+Class inverter (0):  Merged 1 parallel devices.
+Subcircuit summary:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (2->1)             |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|-------------------------------------------
+out                                        |out                                        
+in                                         |in                                         
+VSUBS                                      |gnd **Mismatch**                           
+vd                                         |vd                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for inverter and inverter altered to match.
+Device classes inverter and inverter are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_48WM2A in circuit tg (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SJYH3Y in circuit tg (0)(1 instance)
+
+Class tg (0):  Merged 1 parallel devices.
+Subcircuit summary:
+Circuit 1: tg                              |Circuit 2: tg                              
+-------------------------------------------|-------------------------------------------
+inverter (1)                               |inverter (1)                               
+sky130_fd_pr__pfet_01v8 (2->1)             |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 7 **Mismatch**             |Number of nets: 6 **Mismatch**             
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: tg                              |Circuit 2: tg                              
+
+---------------------------------------------------------------------------------------
+Net: ctrl                                  |Net: ctrl                                  
+  inverter/in = 1                          |  inverter/in = 1                          
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
+                                           |                                           
+Net: inverter_0/out                        |Net: vd                                    
+  inverter/out = 1                         |  inverter/vd = 1                          
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/4 = 1            
+                                           |                                           
+Net: vgnd                                  |Net: vgnd                                  
+  inverter/VSUBS = 1                       |  inverter/gnd = 1                         
+  sky130_fd_pr__nfet_01v8/4 = 1            |  sky130_fd_pr__nfet_01v8/4 = 1            
+                                           |                                           
+(no matching net)                          |Net: nctrl                                 
+                                           |  inverter/out = 1                         
+                                           |  sky130_fd_pr__pfet_01v8/2 = 1            
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: vd                                    |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/4 = 1            |                                           
+                                           |                                           
+Net: inverter_0/vd                         |(no matching net)                          
+  inverter/vd = 1                          |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: tg                              |Circuit 2: tg                              
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__nfet_01v8_SJYH3Y_0 |Instance: sky130_fd_pr__nfet_01v8:M1       
+  (1,3) = (2,2)                            |  (1,3) = (2,2)                            
+  2 = 2                                    |  2 = 2                                    
+  4 = 2                                    |  4 = 2                                    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__pfet_01v8_48WM2A_0 |Instance: sky130_fd_pr__pfet_01v8:M2       
+  (1,3) = (2,2)                            |  (1,3) = (2,2)                            
+  2 = 2                                    |  2 = 2                                    
+  4 = 1                                    |  4 = 2                                    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: inverter_0                       |Instance: inverter:1                       
+  vd = 1                                   |  vd = 2                                   
+  in = 2                                   |  in = 2                                   
+  out = 2                                  |  out = 2                                  
+  VSUBS = 2                                |  gnd = 2                                  
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: tg                              |Circuit 2: tg                              
+-------------------------------------------|-------------------------------------------
+ctrl                                       |vd **Mismatch**                            
+vgnd                                       |(no matching pin)                          
+Cell pin lists are equivalent.
+Device classes tg and tg are equivalent.
+
+Final result: Netlists do not match.
